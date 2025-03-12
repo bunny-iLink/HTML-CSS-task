@@ -1,25 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
     const aboutSections = document.querySelectorAll(".about-section");
-    let currentSection = 0;
+    const jobCards = document.querySelectorAll(".job-card");
 
-    function showNextSection() {
-        if (currentSection < aboutSections.length) {
-            aboutSections[currentSection].classList.add("show");
-            currentSection++;
-            setTimeout(showNextSection, 1000); // Show the next section every 1 second
+    function showElementsSequentially(elements) {
+        let index = 0;
+
+        function showNext() {
+            if (index < elements.length) {
+                elements[index].classList.add("show");
+                index++;
+                setTimeout(showNext, 300); // Reduced delay for smoother effect
+            }
         }
+
+        showNext();
     }
 
-    function checkScroll() {
-        const aboutSection = document.getElementById("about-ilink");
-        const sectionTop = aboutSection.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
+    function createObserver(elements) {
+        if (elements.length === 0) return;
 
-        if (sectionTop < windowHeight / 1.2) {
-            showNextSection();
-            window.removeEventListener("scroll", checkScroll);
-        }
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    showElementsSequentially(elements);
+                    observer.disconnect(); // Stop observing after activation
+                }
+            });
+        }, { threshold: 0.2 });
+
+        observer.observe(elements[0]); // Observe the first element in the group
     }
 
-    window.addEventListener("scroll", checkScroll);
+    createObserver(aboutSections);
+    createObserver(jobCards);
 });
