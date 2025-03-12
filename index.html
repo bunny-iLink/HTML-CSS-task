@@ -1,29 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>iLink Careers</title>
-    <link rel="icon" type="image/png" href="/resources/browser-tab-logo.png" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="nav-div">
-      <nav>
-        <div class="nav-div-logo">
-          <a href="https://ilink-digital.com/">
-            <img src="resources/logo-for-nav.png" alt="" />
-          </a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers at iLink Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <a href="https://ilink-digital.com" class="logo">
+                <img src="/resources/logo-for-nav.png" alt="iLink Digital Logo">
+            </a>
+            <h1 class="nav-title">iLink Digital Careers</h1>
+            <nav>
+                <ul>
+                    <li><a href="#jobs">Open Positions</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="nav-div-head">
-          <h1>iLink Careers</h1>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Join Our Team at iLink Digital</h2>
+            <p>Build your future with innovation, creativity, and technology.</p>
+            <a href="#jobs" class="btn">View Open Positions</a>
         </div>
-        <div class="nav-div-contact">
-          <a href="https://ilink-digital.com/contact">
-            <button>Contact Us</button>
-          </a>
+    </section>
+
+    <!-- About iLink Section with Animation -->
+    <section id="about-ilink">
+        <div class="container">
+            <h2>About iLink Digital</h2>
+            <div class="about-section hidden">
+                <h3>Who We Are</h3>
+                <p>iLink Digital is a technology-driven company specializing in digital transformation.</p>
+            </div>
+            <div class="about-section hidden">
+                <h3>Our Mission</h3>
+                <p>We empower businesses by providing innovative IT solutions and consulting services.</p>
+            </div>
+            <div class="about-section hidden">
+                <h3>Our Values</h3>
+                <p>At iLink Digital, we value integrity, innovation, and collaboration.</p>
+            </div>
         </div>
-      </nav>
-    </div>
-  </body>
+    </section>
+
+    <!-- Job Listings Section -->
+    <section id="jobs" class="jobs">
+        <div class="container">
+            <h2>Current Openings</h2>
+            <div class="job-listing">
+                <h3>Software Engineer</h3>
+                <p>Location: Remote | Full-time</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+            <div class="job-listing">
+                <h3>UI/UX Designer</h3>
+                <p>Location: New York, USA | Full-time</p>
+                <a href="#" class="apply-btn">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Email us at <a href="mailto:careers@ilinkdigital.com">careers@ilinkdigital.com</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 iLink Digital. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
 </html>
