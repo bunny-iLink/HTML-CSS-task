@@ -1,36 +1,59 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const aboutSections = document.querySelectorAll(".about-section");
-    const jobCards = document.querySelectorAll(".job-card");
+  const whyJoinCards = document.querySelectorAll(".why-join-card"); // For "Why Join Us" section
+  const aboutSections = document.querySelectorAll(".about-section");
+  const jobCards = document.querySelectorAll(".job-card"); // For Job Listings
+  const cultureCards = document.querySelectorAll(".culture-card"); // For Culture Section
+  const benefitCards = document.querySelectorAll(".benefit-card"); // For Benefits Section
 
-    function showElementsSequentially(elements) {
-        let index = 0;
+  function showElementsSequentially(elements) {
+    let index = 0;
 
-        function showNext() {
-            if (index < elements.length) {
-                elements[index].classList.add("show");
-                index++;
-                setTimeout(showNext, 300); // Reduced delay for smoother effect
-            }
-        }
-
-        showNext();
+    function showNext() {
+      if (index < elements.length) {
+        elements[index].classList.add("show");
+        index++;
+        setTimeout(showNext, 300); // Smooth staggered effect
+      }
     }
 
-    function createObserver(elements) {
-        if (elements.length === 0) return;
+    showNext();
+  }
 
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    showElementsSequentially(elements);
-                    observer.disconnect(); // Stop observing after activation
-                }
-            });
-        }, { threshold: 0.2 });
+  function createObserver(elements) {
+    if (elements.length === 0) return;
 
-        observer.observe(elements[0]); // Observe the first element in the group
-    }
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            showElementsSequentially(elements);
+            observer.disconnect(); // Stop observing after activation
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
 
-    createObserver(aboutSections);
-    createObserver(jobCards);
+    observer.observe(elements[0]); // Observe the first element
+  }
+
+  // Apply animations to different sections
+  createObserver(aboutSections);
+  createObserver(whyJoinCards);
+  createObserver(jobCards);
+  createObserver(cultureCards);
+  createObserver(benefitCards);
+
+  // Culture Card Click Event (Details Panel)
+  const detailSection = document.querySelector(".culture-detail");
+  const detailTitle = document.getElementById("culture-title");
+  const detailText = document.getElementById("culture-text");
+
+  cultureCards.forEach((card) => {
+    card.addEventListener("click", function () {
+      detailTitle.textContent = this.querySelector("h3").textContent;
+      detailText.textContent = this.querySelector("p").textContent;
+      detailSection.classList.add("show");
+    });
+  });
 });
