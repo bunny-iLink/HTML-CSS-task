@@ -214,3 +214,23 @@ footer {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Social Icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
