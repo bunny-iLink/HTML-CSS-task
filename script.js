@@ -43,17 +43,4 @@ document.addEventListener("DOMContentLoaded", function () {
   createObserver(jobCards);
   createObserver(cultureCards);
   createObserver(benefitCards);
-
-  // Culture Card Click Event (Details Panel)
-  const detailSection = document.querySelector(".culture-detail");
-  const detailTitle = document.getElementById("culture-title");
-  const detailText = document.getElementById("culture-text");
-
-  cultureCards.forEach((card) => {
-    card.addEventListener("click", function () {
-      detailTitle.textContent = this.querySelector("h3").textContent;
-      detailText.textContent = this.querySelector("p").textContent;
-      detailSection.classList.add("show");
-    });
-  });
 });

@@ -97,31 +97,73 @@ nav ul li a {
 
 /* About iLink Digital Section */
 #about-ilink {
-  background: #f8f9fa;
-  padding: 50px 0;
-}
-
-.about-section {
-  background: white;
-  padding: 20px;
-  margin: 20px auto;
-  width: 50%;
-  border-radius: 5px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  border-left: 5px solid #d32f2f; /* Red accent on the left */
+  background: linear-gradient(to right, #f8f9fa, #ffffff); /* Subtle gradient */
+  padding: 60px 0;
+  text-align: center;
 }
 
 .about-ilink-title {
   color: black;
   font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
 }
 
+/* About Section Styling */
+.about-section {
+  background: #ffffff;
+  padding: 25px;
+  margin: 20px auto;
+  width: 60%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  border-left: 6px solid #d32f2f; /* Red accent on the left */
+  text-align: left;
+}
+
+.about-section h3 {
+  color: #d32f2f;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  color: black;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Values List Styling */
+.values-list {
+  list-style: none;
+  padding: 0;
+}
+
+.values-list li {
+  font-size: 1.1em;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.values-list li:last-child {
+  border-bottom: none;
+}
+
+/* Animation Effect */
 .about-section.show {
-  /* Makes the section tiles visible one after other */
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Hover Effect */
+.about-section:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* ------------------- */
@@ -209,6 +251,11 @@ nav ul li a {
   transform: translateY(0);
 }
 
+.openings-title {
+  color: black;
+  font-size: 2em;
+}
+
 /* ------------------- */
 
 /* Contact Section */
@@ -220,6 +267,10 @@ nav ul li a {
   color: #d32f2f; /* Red */
   text-decoration: none;
   font-weight: bold;
+}
+
+.contact p {
+  font-size: 1.1em;
 }
 
 /* ------------------- */
@@ -258,47 +309,90 @@ footer {
 
 /* Our Culture Section */
 #our-culture {
-  background: #f8f9fa;
-  padding: 50px 0;
+  background: linear-gradient(to right, #f8f9fa, #ffffff); /* Soft gradient */
+  padding: 60px 0;
+  text-align: center;
 }
 
+.our-culture-title {
+  color: black;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+}
+
+/* Culture Grid Styling */
 .culture-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   margin-top: 20px;
 }
 
+/* Culture Card Styling */
 .culture-card {
-  background: white;
-  padding: 20px;
-  width: 30%;
-  max-width: 300px;
-  border-radius: 8px;
-  border-left: 5px solid #d32f2f;
+  background: #ffffff;
+  padding: 30px;
+  width: 28%;
+  max-width: 320px;
+  border-radius: 10px;
+  border-top: 5px solid #d32f2f; /* Red accent on top */
   text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  position: relative;
 }
 
 .culture-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Culture Card Icon */
+.culture-card .icon {
+  font-size: 2.5em;
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+
+/* Culture Card Title */
+.culture-card h3 {
+  color: #d32f2f;
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+/* Culture Card Paragraph */
+.culture-card p {
+  color: black;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Detail Section Styling */
 .culture-detail {
-  margin-top: 30px;
-  background: white;
-  padding: 20px;
+  margin-top: 40px;
+  background: #ffffff;
+  padding: 25px;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border-left: 5px solid #d32f2f;
+  border-left: 6px solid #d32f2f;
   max-width: 600px;
   margin: auto;
   text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+.culture-detail.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation Effect */
 .culture-card.hidden,
 .culture-detail.hidden {
   opacity: 0;
@@ -310,11 +404,6 @@ footer {
 .culture-detail.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-.our-culture-title {
-  color: black;
-  font-size: 2em;
 }
 
 /* ------------------- */
@@ -380,43 +469,84 @@ footer {
 
 /* Why Join Us Section */
 #why-join-us {
-  background: black;
-  padding: 50px 0;
+  background: linear-gradient(to right, #000000, #1c1c1c); /* Soft gradient */
+  padding: 60px 0;
   text-align: center;
 }
 
 .why-join-container {
-  width: 80%;
+  width: 85%;
   margin: auto;
 }
 
+/* Title Styling */
 .why-join-title {
   color: white;
-  font-size: 2em;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 1.5px;
 }
 
+/* Grid Layout */
+.why-join-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Why Join Us Cards */
 .why-join-card {
-  background: white;
-  padding: 20px;
-  margin: 20px auto;
-  width: 50%;
-  border-radius: 5px;
+  background: #ffffff;
+  padding: 30px;
+  width: 30%;
+  max-width: 320px;
+  border-radius: 10px;
+  border-top: 5px solid #d32f2f; /* Red accent */
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Hover Effect */
+.why-join-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styling */
+.why-join-card .icon {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+/* Card Title */
+.why-join-card h3 {
+  color: #d32f2f;
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+/* Card Text */
+.why-join-card p {
+  color: black;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Animation Effect */
+.why-join-card.hidden {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  border-left: 5px solid #d32f2f; /* Red accent */
-  color: black;
 }
 
-/* Class that makes sections visible */
 .why-join-card.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-.openings-title {
-  color: black;
-  font-size: 2em;
 }
 
 /* ------------------- */
