@@ -101,6 +101,11 @@ nav ul li a {
   border-left: 5px solid #d32f2f; /* Red accent on the left */
 }
 
+.about-ilink-title {
+  color: black;
+  font-size: 2em;
+}
+
 /* Class that makes sections visible one by one */
 .about-section.show {
   opacity: 1;
@@ -291,6 +296,11 @@ footer {
   transform: translateY(0);
 }
 
+.our-culture-title {
+  color: black;
+  font-size: 2em;
+}
+
 /* Benefits Section */
 #benefits {
   background: black; /* Light Gray */
@@ -335,6 +345,11 @@ footer {
   color: #d32f2f; /* Red */
   font-size: 1.2em;
   margin-bottom: 0;
+}
+
+.benefits-title {
+  color: white;
+  font-size: 2em;
 }
 
 /* Animation */
@@ -390,4 +405,9 @@ footer {
 .why-join-card.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.openings-title {
+  color: black;
+  font-size: 2em;
 }
