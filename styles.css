@@ -13,6 +13,8 @@ body {
   text-align: center;
 }
 
+/* ------------------- */
+
 /* Navigation Bar */
 header {
   background: white; /* Red */
@@ -27,11 +29,15 @@ header {
   margin: auto;
 }
 
+/* ------------------- */
+
 /* Logo on Left */
 .logo img {
   width: 200px;
   height: auto;
 }
+
+/* ------------------- */
 
 /* Title in the Center */
 .nav-title {
@@ -40,6 +46,8 @@ header {
   color: #d32f2f;
   font-size: 1.8em;
 }
+
+/* ------------------- */
 
 /* Links on the Right */
 nav ul {
@@ -56,6 +64,8 @@ nav ul li a {
   text-decoration: none;
   font-size: 1em;
 }
+
+/* ------------------- */
 
 /* Hero Section */
 .hero {
@@ -83,6 +93,8 @@ nav ul li a {
   margin-top: 20px;
 }
 
+/* ------------------- */
+
 /* About iLink Digital Section */
 #about-ilink {
   background: #f8f9fa;
@@ -106,11 +118,13 @@ nav ul li a {
   font-size: 2em;
 }
 
-/* Class that makes sections visible one by one */
 .about-section.show {
+  /* Makes the section tiles visible one after other */
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ------------------- */
 
 /* Job Listings */
 .jobs {
@@ -148,25 +162,6 @@ nav ul li a {
   border-radius: 5px;
 }
 
-/* Contact Section */
-.contact {
-  padding: 50px 0;
-}
-
-.contact a {
-  color: #d32f2f; /* Red */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Footer */
-footer {
-  background: #d32f2f; /* Red */
-  color: white;
-  padding: 15px 0;
-  margin-top: 20px;
-}
-
 .job-listing.hidden {
   opacity: 0;
   transform: translateY(50px);
@@ -176,12 +171,6 @@ footer {
 .job-listing.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-@media (max-width: 768px) {
-  .job-card {
-    width: 100%;
-  }
 }
 
 .job-card h3 {
@@ -220,6 +209,31 @@ footer {
   transform: translateY(0);
 }
 
+/* ------------------- */
+
+/* Contact Section */
+.contact {
+  padding: 50px 0;
+}
+
+.contact a {
+  color: #d32f2f; /* Red */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ------------------- */
+
+/* Footer */
+footer {
+  background: #d32f2f; /* Red */
+  color: white;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+
+/* ------------------- */
+
 /* Social Icons */
 .social-icons {
   margin-top: 10px;
@@ -239,6 +253,8 @@ footer {
 .social-icons a:hover img {
   transform: scale(1.1);
 }
+
+/* ------------------- */
 
 /* Our Culture Section */
 #our-culture {
@@ -301,6 +317,8 @@ footer {
   font-size: 2em;
 }
 
+/* ------------------- */
+
 /* Benefits Section */
 #benefits {
   background: black; /* Light Gray */
@@ -358,18 +376,7 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .benefit-card {
-    width: 45%;
-  }
-}
-
-@media (max-width: 768px) {
-  .benefit-card {
-    width: 100%;
-  }
-}
+/* ------------------- */
 
 /* Why Join Us Section */
 #why-join-us {
@@ -410,4 +417,158 @@ footer {
 .openings-title {
   color: black;
   font-size: 2em;
+}
+
+/* ------------------- */
+
+/* Responsive Styles */
+
+/* Tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+
+  .nav-container {
+    width: 95%;
+  }
+
+  .about-section,
+  .why-join-card {
+    width: 70%;
+  }
+
+  .culture-card,
+  .benefit-card {
+    width: 45%;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-title {
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .about-section,
+  .why-join-card {
+    width: 90%;
+  }
+
+  .job-card,
+  .culture-card,
+  .benefit-card {
+    width: 100%;
+  }
+
+  .culture-grid,
+  .benefits-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .why-join-container {
+    width: 90%;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .logo img {
+    width: 150px;
+  }
+
+  .nav-title {
+    font-size: 1.3em;
+  }
+
+  .hero h2 {
+    font-size: 1.8em;
+  }
+
+  .hero p {
+    font-size: 0.9em;
+  }
+
+  .btn {
+    padding: 8px 15px;
+  }
+
+  .about-section,
+  .why-join-card {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .job-card {
+    padding: 15px;
+  }
+
+  .culture-card,
+  .benefit-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .apply-btn {
+    padding: 8px 12px;
+  }
+
+  .why-join-container {
+    width: 95%;
+  }
+
+  .why-join-title {
+    font-size: 1.5em;
+  }
+
+  .social-icons img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .benefit-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefit-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .job-card {
+    width: 100%;
+  }
 }
